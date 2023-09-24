@@ -1,0 +1,82 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="NavigationBar.master.cs" Inherits="RAAMEN.View.NavigationBar" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <style>
+        html * {
+            font-size: 1em !important;
+            color: #000;
+            font-family: Arial !important;
+        }
+   
+        Button.navbar {
+            padding: 12px 10px;
+            margin: 8px 0;
+            border-style:none;
+            display:flex;
+            color: #BC4749;
+            font-size:larger;
+            font-weight:bold;
+            border-style: none;
+            background-color: #386641;
+            width: 100%;
+            
+           
+        }
+        .button:hover {
+            color:#386641;
+            cursor: pointer;
+        }
+        .button {
+            color: white;
+        }
+        .red{
+            color: #BC4749;
+        }
+        .beige{
+            color: #F2E8CF;
+        }
+        .green{
+            color: #386641;
+        }
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+        .table-decor {
+            border: 1px solid black;
+            width: 25%;
+            padding: 8px;
+        }
+        
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">        
+        <div>
+            <nav>
+                <div class="navbar">
+                    <asp:Button ID="OrderRamen" runat="server" Text="Order Ramen" Visible="false" OnClick="OrderRamen_Click"  Font-Size="Larger" Font-Bold="true" ForeColor="#BC4749" BorderStyle="None" BackColor="White"/>
+                    <asp:Button ID="History" runat="server" Text="History" Visible="false" OnClick="History_Click" Font-Size="Larger" Font-Bold="true" ForeColor="#BC4749" BorderStyle="None" BackColor="White"/>                    
+                    <asp:Button ID="Home" runat="server" Text="Home" Visible="false" OnClick="Home_Click" Font-Size="Larger" Font-Bold="true" ForeColor="#BC4749" BorderStyle="None" BackColor="White"/>
+                    <asp:Button ID="ManageRamen" runat="server" Text="Manage Ramen" Visible="false" OnClick="ManageRamen_Click" Font-Size="Larger" Font-Bold="true" ForeColor="#BC4749" BorderStyle="None" BackColor="White"/>
+                    <asp:Button ID="OrderQueue" runat="server" Text="Order Queue" Visible="false" OnClick="OrderQueue_Click" Font-Size="Larger" Font-Bold="true" ForeColor="#BC4749" BorderStyle="None" BackColor="White" />
+                    <asp:Button ID="Report" runat="server" Text="Report" Visible="false" OnClick="Report_Click" Font-Size="Larger" Font-Bold="true" ForeColor="#BC4749" BorderStyle="None" BackColor="White"/>
+                    <asp:Button ID="ProfilePage" runat="server" Text="Profile" OnClick="ProfilePage_Click" Font-Size="Larger" Font-Bold="true" ForeColor="#BC4749" BorderStyle="None" BackColor="White"/>
+                    <asp:Button ID="Logout" runat="server" Text="Logout" style="background-color:#BC4749; border-color:#BC4749; color:white" OnClick="Logout_Click" Font-Size="Larger" Font-Bold="true" ForeColor="White" BorderStyle="None" BackColor="#F2E8CF" />
+                </div>
+            </nav>
+            
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
